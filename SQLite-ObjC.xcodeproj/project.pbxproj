@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -160,7 +160,7 @@
 				ORGANIZATIONNAME = "Dan Knapp";
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "SQLite-ObjC" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 1;
 			mainGroup = 0867D691FE84028FC02AAC07 /* SQLite-ObjC */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -223,6 +223,7 @@
 				GCC_PREFIX_HEADER = "SQLite-ObjC_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "@loader_path/../Frameworks/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = "SQLite-ObjC";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -241,6 +242,7 @@
 				GCC_PREFIX_HEADER = "SQLite-ObjC_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "@loader_path/../Frameworks/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = "SQLite-ObjC";
 				WRAPPER_EXTENSION = framework;
 			};

@@ -12,12 +12,15 @@
 
 @interface SQLDatabase : NSObject {
     sqlite3 *lowLevelDatabase;
-    BOOL open;
+    BOOL isOpen;
 }
 @property (assign) sqlite3 *lowLevelDatabase;
+@property (assign) BOOL isOpen;
 
 + (SQLDatabase *) databaseInMemory;
 + (SQLDatabase *) databaseInFile: (NSString *) filename;
 + (void) throwAndCloseDatabase: (sqlite3 *) lowLevelDatabase;
-+ (NSError *) errorWithDescription: (NSString *) description;
++ (void) throwExceptionWithDescription: (NSString *) description;
+- (void) throwUnlessOpen;
+- (void) close;
 @end
