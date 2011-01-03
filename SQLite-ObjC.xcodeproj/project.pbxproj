@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		E26C8BCD12D133A6000CDDF4 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E26C8BCC12D133A6000CDDF4 /* sqlite3.c */; };
+		E26C8BD412D13404000CDDF4 /* SQLDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = E26C8BD212D13404000CDDF4 /* SQLDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E26C8BD512D13404000CDDF4 /* SQLDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E26C8BD312D13404000CDDF4 /* SQLDatabase.m */; };
+		E26C8BDC12D1346F000CDDF4 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = E26C8BDB12D1346F000CDDF4 /* sqlite3.h */; settings = {ATTRIBUTES = (Private, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* SQLite-ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "SQLite-ObjC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		E26C8BCC12D133A6000CDDF4 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		E26C8BD212D13404000CDDF4 /* SQLDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLDatabase.h; sourceTree = "<group>"; };
+		E26C8BD312D13404000CDDF4 /* SQLDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLDatabase.m; sourceTree = "<group>"; };
+		E26C8BDB12D1346F000CDDF4 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E26C8BD212D13404000CDDF4 /* SQLDatabase.h */,
+				E26C8BD312D13404000CDDF4 /* SQLDatabase.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -100,6 +110,8 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E26C8BDB12D1346F000CDDF4 /* sqlite3.h */,
+				E26C8BCC12D133A6000CDDF4 /* sqlite3.c */,
 				32DBCF5E0370ADEE00C91783 /* SQLite-ObjC_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -112,6 +124,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26C8BD412D13404000CDDF4 /* SQLDatabase.h in Headers */,
+				E26C8BDC12D1346F000CDDF4 /* sqlite3.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +156,9 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Dan Knapp";
+			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "SQLite-ObjC" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
@@ -171,6 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26C8BCD12D133A6000CDDF4 /* sqlite3.c in Sources */,
+				E26C8BD512D13404000CDDF4 /* SQLDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +251,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -246,6 +266,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
